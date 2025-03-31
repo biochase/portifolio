@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --card-shadow: 0px 20px 100px -10px rgba(66,71,91,0.1);
+  --shadow-extern: 0 0 40px 10px oklch(0.609 0.126 221.723), 0 0 50px oklch(0.609 0.126 221.723); 
+}
+
+html {
+    @apply scroll-smooth overflow-x-hidden;
+}
+  
+body {
+   @apply box-border bg-gray-900 text-gray-100;
+ }
+
+
+ .btn-primary {
+    @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2 mt-8 hover:bg-blue-800 cursor-pointer;
+ }
+
+ .aboutImg::after {
+   @apply content-[''] lg:w-86 w-64 left-0 top-0 rounded-xl rotate-12 h-full absolute bg-cyan-600 -z-10 shadow-extern;
+ }
+
+
+ input, textarea {
+   @apply bg-gray-700 outline-none rounded-lg p-3;
+ }
+
+ ::placeholder {
+   @apply text-lg;
+ }
+
+ ::selection{
+   @apply bg-cyan-600;
+ }
+
+ .decorationlink{
+   @apply px-6 hover:text-cyan-600; 
+ }
+
+ .image img{
+  border-radius: 55% 45% 55% 45%;
+  box-shadow: 0 0 40px 10px oklch(0.609 0.126 221.723), 0 0 50px oklch(0.609 0.126 221.723);
+ }
+  
+ /* Animation */
+
+.animate-image {
+  Transition: all ease-in 1s;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.animate-text {
+ transition: all ease-in 1s;
+ transform: translateY(50%);
+ opacity: 0;
+}
+
+ .slide-in {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.animate-about-image {
+  transform: translateX(60%);
+  opacity: 0;
+  transition: all ease-in 1s;
+}
+.animate-about-text {
+ transform: translateX(-60%);
+ opacity: 0;
+ transition: all ease-in 1s;
+}
+
+.animate-skill{
+  opacity:0;
+  transform: scale(0.3);
+  transition: all ease-in 1s;
+}
+
+.animate-project{
+  transform: rotateX(180deg) scale(0.3);
+  transition: all ease-in 1s;
+  opacity:0;
+}
+
+.animate-contact{
+  opacity:0;
+  transform: scale(1.5);
+  transition: all ease-in 1s;
+}
+
+.animate-cont-labels{
+  opacity:0;
+  transform: translateX(20%);
+  transition: all ease-in 1s;
+  transition-delay: 1.5s;
+}
+
+.animate-cont-head{
+  opacity:0;
+  transform: rotate(180deg) scale(0.3);
+  transition: all ease-in 1s;
+}
+
+.animate-service-card {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all ease-in 1s;
+  transition-delay: calc(var(--index) * 200ms);
+ }
+
+ .animate-service-card:nth-child(1) {
+  visibility: visible;
+  --index: 1;
+ }
+
+ .animate-service-card:nth-child(2) {
+  visibility: visible;
+  --index: 2;
+ }
+
+ .animate-service-card:nth-child(3) {
+  visibility: visible;
+  --index: 3;
+ }
