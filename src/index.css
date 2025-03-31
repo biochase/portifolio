@@ -20,7 +20,7 @@ body {
  }
 
  .aboutImg::after {
-   @apply content-[''] lg:w-86 w-64 left-0 top-0 rounded-xl rotate-12 h-full absolute bg-cyan-600 -z-10 shadow-extern;
+   @apply content-[''] lg:w-86 sm:w-10/12 max-w-sm left-0 top-0 rounded-xl w-full rotate-12 h-full absolute bg-cyan-600 -z-10 shadow-extern;
  }
 
 
@@ -64,8 +64,8 @@ body {
 }
 
 .animate-about-image {
-  transform: translateX(60%);
   opacity: 0;
+  transform: translateY(40%);
   transition: all ease-in 1s;
 }
 .animate-about-text {
@@ -88,13 +88,13 @@ body {
 
 .animate-contact{
   opacity:0;
-  transform: scale(1.5);
+  transform: translateX(-60%);
   transition: all ease-in 1s;
 }
 
 .animate-cont-labels{
   opacity:0;
-  transform: translateX(20%);
+  transform: translateY(20%);
   transition: all ease-in 1s;
   transition-delay: 1.5s;
 }

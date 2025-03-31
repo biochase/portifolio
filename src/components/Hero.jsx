@@ -35,7 +35,7 @@ const Hero = () => {
 
     return(
         <section ref={ref} id="home" className='min-h-screen flex py-10 md:flex-row flex-col items-center'>
-            <div className='flex px-40 items-center justify-center h-full image animate-image'>
+            <div className='flex lg:px-40 sm:px:0 items-center justify-center h-full image animate-image'>
                 <img src={hero}  alt="" className='md:w-11/12 max-w-sm w-55 h-full mt-10 object-cover' />
             </div>
             <div className='flex-1 mt-5'>

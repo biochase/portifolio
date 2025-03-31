@@ -36,7 +36,7 @@ const About = () => {
         {text:'Anos de Experiência', count:'16'},
         {text:'Projetos Completos', count:'30'},
         {text:'Trabalhos em Empresas', count:'10'}
-    ]
+    ]    
 
     return(
         <section ref={ref} id="about" className='py-10 text-white'>
