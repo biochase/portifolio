@@ -54,7 +54,7 @@ const Service = () => {
     ]
     
     return (
-        <section ref={ref} id="service" className='min-h-screen py-15  text-white text-center'>
+        <section ref={ref} id="service" className='py-15  text-white text-center'>
             <div className="animate-text">
                 <h3 className="mt-8 text-4xl font-semibold">Meu <span className="text-cyan-600">Servi&ccedil;o</span> </h3>                 
             </div>
