@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
 
@@ -29,12 +30,13 @@ const Navbar = () => {
                                setActive(menuLinks[index].name);                                 
                             }
                         })
-            window.scrollY > 0 ? setSticky(true) : setSticky(false);
+            window.scrollY > 0 ? setSticky(true): setSticky(false);
+            
         })
     },[])    
 
     return (
-        <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky ? 'bg-white text-gray-900':'text-white'}`}>
+        <nav className={`fixed w-full left-0 top-0 z-[999] ${sticky ? 'bg-white text-gray-900' :'text-white'}`}>
             <div className="flex items-center justify-between">
                 <div className="mx-7">
                     <h4 className="text-4xl uppercase font-bold">
@@ -54,8 +56,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div onClick={() => setOpen(!open)} 
-                    className={`z-[999] ${open ? "text-gray-900 " : "text-gray-100"} text-3xl md:hidden m-5`}>
-                    <ion-icon name="menu"></ion-icon>
+                    className={`z-[999] text-3xl md:hidden m-5`}>
+                        {!open ? (sticky ? <IoMenu color="#000"/>: <IoMenu color="#fff"/>) : <IoMenu color="#000"/>}
                 </div>
                 <div className={`md:hidde text-gray-900 absolute w-2/3 h-screen px-7 py-2 font-medium bg-white top-0 duration-300 ${open ? "right-0" : "right-[-100%]"}`} >
                     <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">

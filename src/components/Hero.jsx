@@ -34,14 +34,14 @@ const Hero = () => {
   }, [isIntersecting]);
 
     return(
-        <section ref={ref} id="home" className='min-h-screen flex py-10 md:flex-row flex-col items-center'>
+        <section ref={ref} id="home" className='min-h-screen flex py-10 lg:flex-row flex-col items-center'>
             <div className='flex lg:px-40 sm:px:0 items-center justify-center h-full image animate-image'>
-                <img src={hero}  alt="" className='md:w-11/12 max-w-sm w-55 h-full mt-10 object-cover' />
+                <img src={hero}  alt="" className='lg:w-10/12 md:w-8/12 max-w-sm w-55 h-full mt-10 object-cover' />
             </div>
             <div className='flex-1 mt-5'>
-                <div className='md:text-left text-center animate-text'>
-                    <h1 className='md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold'>
-                        <span className='text-cyan-600 md:text-6xl text-5xl'>
+                <div className='lg:text-left text-center animate-text'>
+                    <h1 className='lg:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold md:mt-15'>
+                        <span className='text-cyan-600 lg:text-6xl text-5xl'>
                             Ola!
                             <br />
                         </span>

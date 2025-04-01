@@ -16,11 +16,11 @@ body {
 
 
  .btn-primary {
-    @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2 mt-8 hover:bg-blue-800 cursor-pointer;
+    @apply bg-cyan-600 font-semibold text-white lg:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2 mt-8 hover:bg-blue-800 cursor-pointer;
  }
 
  .aboutImg::after {
-   @apply content-[''] lg:w-86 sm:w-10/12 max-w-sm left-0 top-0 rounded-xl w-full rotate-12 h-full absolute bg-cyan-600 -z-10 shadow-extern;
+   @apply content-[''] lg:w-86 sm:w-10/12 md:w-81 max-w-sm left-0 top-0 rounded-xl w-full rotate-12 h-full absolute bg-cyan-600 -z-10 shadow-extern;
  }
 
 
