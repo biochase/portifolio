@@ -70,7 +70,7 @@ const About = () => {
                             </div>
                             <br />
                             <br />
-                            <a href="./dist/assets/FABIO_2025.pdf" download>
+                            <a href="./assets/FABIO_2025.pdf" download>
                                 <button className='btn-primary'>Download CV</button>
                             </a>
                             
