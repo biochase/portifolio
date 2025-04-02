@@ -64,8 +64,8 @@ const Contact = () => {
 
     const sendEmail = (e) => {
       e.preventDefault();
-      const validationErrors = validateForm(formData);
       console.log("key: ", import.meta.env.VITE_PUBLIC_KEY)
+      const validationErrors = validateForm(formData);
       if (Object.keys(validationErrors).length === 0) {
         emailjs
         .sendForm(import.meta.env.VITE_SERVICE_ID, 
@@ -83,6 +83,7 @@ const Contact = () => {
             },
             (error) => {
               setErrors(validationErrors);
+              console.log("key: ", import.meta.env.VITE_PUBLIC_KEY)
             },
           );
       };
