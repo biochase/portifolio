@@ -70,7 +70,7 @@ const Contact = () => {
         .sendForm(import.meta.env.VITE_SERVICE_ID, 
           import.meta.env.VITE_TEMPLATE_ID, 
           e.target, 
-          import.meta.env.VITE_PUBLIC_KEY)
+          import.meta.env.VITE_PRIVATE_KEY)
           .then(
             () => {
               setOpen(true);
