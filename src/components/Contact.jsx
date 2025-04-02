@@ -13,6 +13,8 @@ const Contact = () => {
   const[open, setOpen] = useState(false);
   const [isIntersecting, setIsIntersecting] = useState(false);    
   const ref = useRef(null);
+
+  useEffect(() => emailjs.init(import.meta.env.VITE_PUBLIC_KEY), []);
     
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -64,14 +66,13 @@ const Contact = () => {
 
     const sendEmail = (e) => {
       e.preventDefault();
-      console.log("key: ", import.meta.env.VITE_PUBLIC_KEY)
       const validationErrors = validateForm(formData);
       if (Object.keys(validationErrors).length === 0) {
         emailjs
         .sendForm(import.meta.env.VITE_SERVICE_ID, 
           import.meta.env.VITE_TEMPLATE_ID, 
-          e.target, 
-          import.meta.env.VITE_PUBLIC_KEY)
+          e.target 
+          )
           .then(
             () => {
               setOpen(true);
@@ -82,8 +83,7 @@ const Contact = () => {
               setFormData({name:"", email:"", message:""})
             },
             (error) => {
-              setErrors(validationErrors);
-              console.log("key: ", import.meta.env.VITE_PUBLIC_KEY)
+              setErrors(validationErrors);              
             },
           );
       };
