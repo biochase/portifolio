@@ -14,7 +14,6 @@ body {
    @apply box-border bg-gray-900 text-gray-100;
  }
 
-
  .btn-primary {
     @apply bg-cyan-600 font-semibold text-white lg:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2 mt-8 hover:bg-blue-800 cursor-pointer;
  }
@@ -22,7 +21,6 @@ body {
  .aboutImg::after {
    @apply content-[''] lg:w-86 sm:w-10/12 md:w-81 max-w-sm left-0 top-0 rounded-xl w-full rotate-12 h-full absolute bg-cyan-600 -z-10 shadow-extern;
  }
-
 
  input, textarea {
    @apply bg-gray-700 outline-none rounded-lg p-3;
@@ -44,7 +42,40 @@ body {
   border-radius: 55% 45% 55% 45%;
   box-shadow: 0 0 40px 10px oklch(0.609 0.126 221.723), 0 0 50px oklch(0.609 0.126 221.723);
  }
-  
+
+ #email>div{
+   cursor: pointer;
+ }
+
+#email>div::before{
+  content:"Copiado!";
+  font-size: 15px;
+  position: absolute;
+  top: -35px;
+  background-color: oklch(0.609 0.126 221.723);
+  padding: 2px 5px;
+  border-radius: 20px;
+  display: none;
+}
+
+#email>div::after{
+  content:"";
+  position: absolute;
+  font-size: 15px;
+  top: -18px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  background-color: oklch(0.609 0.126 221.723);
+  transform: rotate(45deg);
+  display: none;
+}
+
+#email>div.active::before,
+#email>div.active::after {
+  display: block;
+}
+
  /* Animation */
 
 .animate-image {
